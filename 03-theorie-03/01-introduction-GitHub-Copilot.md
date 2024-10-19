@@ -128,7 +128,7 @@ GitHub Copilot est un outil très puissant qui peut considérablement augmenter 
 En adoptant de bonnes pratiques et en utilisant Copilot avec discernement, tu peux exploiter son plein potentiel dans tes projets.
 
 ------------
-# Annexe - Utilisation avec git
+# Annexe 1 - Utilisation avec git
 ------------
 
 
@@ -278,4 +278,186 @@ git merge nouvelle-branche
 ### Conclusion
 
 GitHub Copilot est un excellent assistant pour générer des commandes Git adaptées aux débutants. En fournissant des descriptions claires sous forme de commentaires, tu peux guider Copilot pour qu’il te propose les commandes les plus appropriées, puis les adapter en fonction du contexte.
+
+
+
+
+
+
+
+
+
+
+------------
+# Annexe 2 - Scénarios complexes avec GitHub Copilot
+------------
+
+- Poursuivons avec des exemples plus complexes de génération de commandes Git avec GitHub Copilot. 
+- Je vais te montrer comment créer des scénarios d'utilisation plus avancés et comment exploiter pleinement les capacités de Copilot pour vous aider à mieux comprendre Git.
+
+
+#### 1. Gestion des branches distantes
+
+Pour un projet où les étudiants doivent apprendre à travailler avec des branches distantes, voici comment guider Copilot pour générer des commandes complexes.
+
+```bash
+# Commande pour afficher toutes les branches locales et distantes
+```
+
+Copilot va suggérer :
+```bash
+git branch -a
+```
+
+Ensuite, pour enseigner comment créer une branche locale à partir d'une branche distante :
+
+```bash
+# Commande pour créer une branche locale à partir d'une branche distante
+```
+
+Copilot peut proposer :
+```bash
+git checkout -b nouvelle-branche origin/nouvelle-branche
+```
+
+#### 2. Synchronisation avec des branches distantes
+
+Pour enseigner à tes étudiants comment synchroniser leur dépôt local avec un dépôt distant, tu peux commencer par :
+
+```bash
+# Commande pour récupérer les dernières modifications depuis le dépôt distant
+```
+
+Copilot pourrait générer :
+```bash
+git fetch origin
+```
+
+Ensuite :
+```bash
+# Commande pour mettre à jour la branche locale avec les modifications de la branche distante
+```
+
+Copilot va probablement proposer :
+```bash
+git pull origin main
+```
+
+Tu peux compléter cela avec une explication sur les différences entre `git pull` et `git fetch` + `git merge`.
+
+#### 3. Résolution de conflits de fusion
+
+Un autre cas d'usage intéressant est la gestion des conflits de fusion. Voici un exemple :
+
+```bash
+# Commande pour résoudre un conflit de fusion
+```
+
+Copilot pourrait générer :
+```bash
+git merge nouvelle-branche
+# Si un conflit apparaît, voici comment voir les fichiers en conflit :
+git status
+# Commande pour modifier les fichiers et marquer le conflit comme résolu :
+git add <fichier_conflit>
+# Finalement, terminer la fusion avec :
+git commit
+```
+
+#### 4. Gestion avancée des commits
+
+Pour enseigner des commandes plus avancées concernant les commits, comme l'annulation ou la modification de commits, voici quelques exemples.
+
+**Annuler un commit** :
+```bash
+# Commande pour annuler le dernier commit tout en gardant les modifications
+```
+
+Copilot pourrait proposer :
+```bash
+git reset --soft HEAD~1
+```
+
+**Modifier un commit existant** :
+```bash
+# Commande pour modifier le message du dernier commit
+```
+
+Copilot générera probablement :
+```bash
+git commit --amend -m "Nouveau message de commit"
+```
+
+#### 5. Réécriture de l'historique Git
+
+Pour des commandes plus avancées sur la réécriture de l’historique, comme l'utilisation de `git rebase` ou `git cherry-pick`, tu peux commencer par :
+
+```bash
+# Commande pour réécrire l'historique en fusionnant des commits
+```
+
+Copilot proposera probablement :
+```bash
+git rebase -i HEAD~3
+```
+
+Cela permettra à tes étudiants de voir une interface interactive pour fusionner ou supprimer des commits.
+
+#### 6. Utilisation de Git Stash
+
+Lorsque tes étudiants travaillent sur des modifications incomplètes mais souhaitent changer de branche sans perdre leur travail, voici comment guider Copilot :
+
+```bash
+# Commande pour sauvegarder les modifications dans un stash
+```
+
+Copilot va générer :
+```bash
+git stash
+```
+
+Ensuite :
+```bash
+# Commande pour appliquer le dernier stash
+```
+
+Copilot pourrait proposer :
+```bash
+git stash apply
+```
+
+### Stratégies pour maximiser l'usage de GitHub Copilot
+
+#### 1. **Structurer les étapes clairement**
+   Lorsque tu écris des scénarios pour tes étudiants, structure chaque étape avec des commentaires ou des descriptions pour permettre à Copilot de bien comprendre ce qui est attendu. Par exemple, en donnant des consignes claires dans un fichier de script ou dans un README.
+
+#### 2. **Encourager les expérimentations**
+   Encourage tes étudiants à taper des commentaires décrivant leurs actions souhaitées pour voir ce que Copilot suggère. Cela les aidera à mieux comprendre les commandes Git et à explorer les solutions proposées.
+
+#### 3. **Utilisation de Cas Pratiques**
+   Voici un cas pratique où Copilot peut être utilisé pour proposer une série de commandes Git pour gérer un projet collaboratif :
+
+```bash
+# 1. Cloner un dépôt Git existant
+git clone <url_du_dépôt>
+
+# 2. Créer une nouvelle branche pour travailler sur une fonctionnalité
+git checkout -b nouvelle-fonctionnalité
+
+# 3. Ajouter les fichiers modifiés et les commiter
+git add .
+git commit -m "Ajout de la nouvelle fonctionnalité"
+
+# 4. Pousser la branche vers le dépôt distant
+git push origin nouvelle-fonctionnalité
+
+# 5. Ouvrir une pull request sur GitHub
+```
+
+Pour la dernière étape, tu pourrais ajouter des commentaires expliquant le processus manuel d’ouverture d'une pull request via l'interface GitHub.
+
+### Conclusion
+
+GitHub Copilot est un outil puissant qui peut guider des débutants dans l’apprentissage des commandes Git à travers des suggestions automatiques basées sur des commentaires ou des descriptions textuelles. En combinant Copilot avec des explications pédagogiques et des cas pratiques, tu peux rendre l’apprentissage de Git beaucoup plus intuitif pour tes étudiants.
+
 
