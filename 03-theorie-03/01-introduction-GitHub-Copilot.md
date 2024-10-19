@@ -461,3 +461,178 @@ Pour la dernière étape, tu pourrais ajouter des commentaires expliquant le pro
 GitHub Copilot est un outil puissant qui peut guider des débutants dans l’apprentissage des commandes Git à travers des suggestions automatiques basées sur des commentaires ou des descriptions textuelles. En combinant Copilot avec des explications pédagogiques et des cas pratiques, tu peux rendre l’apprentissage de Git beaucoup plus intuitif pour tes étudiants.
 
 
+
+
+
+
+
+
+
+------------
+# Annexe 3 - Scénarios complexes avec GitHub Copilot
+------------
+
+
+- Explorons un cas particulier plus en profondeur.
+- Voyons comment utiliser GitHub Copilot pour générer des commandes Git adaptées à un scénario plus spécifique et avancé, tout en continuant à bous aider à comprendre les commandes à appliquer.
+
+### Cas Pratique : Travail collaboratif avec des branches Git
+
+Voici un scénario où les étudiants doivent travailler sur différentes fonctionnalités, gérer des branches, résoudre des conflits, et collaborer via GitHub.
+
+#### Scénario 1 : Travail sur une nouvelle fonctionnalité
+
+**Objectif** : Un étudiant doit créer une branche, ajouter des fonctionnalités, résoudre des conflits potentiels, puis fusionner son travail.
+
+1. **Créer une branche pour une nouvelle fonctionnalité** :
+   - Utilise Copilot pour générer la commande appropriée :
+
+   ```bash
+   # Commande pour créer une nouvelle branche nommée 'nouvelle-fonctionnalité'
+   ```
+
+   Copilot pourrait suggérer :
+   ```bash
+   git checkout -b nouvelle-fonctionnalité
+   ```
+
+   **Explication pour les étudiants** : Cette commande crée une nouvelle branche et te bascule dessus. Les branches permettent de travailler de manière isolée sur une nouvelle fonctionnalité sans affecter la branche principale.
+
+2. **Ajouter des fichiers et commiter les changements** :
+   - Les étudiants ajoutent leurs fichiers modifiés à l'index et créent un commit.
+
+   ```bash
+   # Commande pour ajouter tous les fichiers modifiés
+   ```
+
+   Copilot pourrait proposer :
+   ```bash
+   git add .
+   ```
+
+   ```bash
+   # Commande pour commiter les changements avec un message de commit
+   ```
+
+   Copilot pourrait suggérer :
+   ```bash
+   git commit -m "Ajout de la fonctionnalité de connexion"
+   ```
+
+   **Explication** : `git add` prépare les fichiers pour le commit, et `git commit -m` enregistre les modifications avec un message décrivant les changements.
+
+3. **Pousser la branche vers le dépôt distant** :
+   - Ensuite, l’étudiant doit pousser ses changements vers le dépôt distant pour que les autres puissent y accéder.
+
+   ```bash
+   # Commande pour pousser la branche 'nouvelle-fonctionnalité' vers GitHub
+   ```
+
+   Copilot pourrait proposer :
+   ```bash
+   git push origin nouvelle-fonctionnalité
+   ```
+
+   **Explication** : `git push` envoie les commits locaux vers le dépôt distant. Il est important de mentionner la branche avec `origin nouvelle-fonctionnalité`.
+
+4. **Résoudre les conflits de fusion** :
+   - Lorsqu’il est temps de fusionner cette branche avec la branche principale, des conflits peuvent survenir si d’autres étudiants ont travaillé sur les mêmes fichiers.
+
+   ```bash
+   # Commande pour basculer vers la branche principale
+   ```
+
+   Copilot suggérera probablement :
+   ```bash
+   git checkout main
+   ```
+
+   ```bash
+   # Commande pour fusionner la branche 'nouvelle-fonctionnalité' avec 'main'
+   ```
+
+   Copilot pourrait proposer :
+   ```bash
+   git merge nouvelle-fonctionnalité
+   ```
+
+   **Explication** : Si des conflits apparaissent, Git te demandera de résoudre manuellement les conflits dans les fichiers concernés. Ensuite, tu devras ajouter ces fichiers résolus avec `git add` et terminer la fusion avec `git commit`.
+
+5. **Résolution de conflits** :
+   - Si un conflit est détecté, voici comment le résoudre.
+
+   ```bash
+   # Commande pour vérifier les fichiers en conflit
+   ```
+
+   Copilot peut proposer :
+   ```bash
+   git status
+   ```
+
+   Une fois les conflits résolus manuellement :
+   ```bash
+   # Commande pour ajouter le fichier résolu
+   git add <nom_du_fichier>
+   ```
+
+   Enfin, pour terminer la fusion :
+   ```bash
+   git commit
+   ```
+
+#### Scénario 2 : Collaborer via Pull Requests
+
+Dans un projet collaboratif, les étudiants travaillent souvent sur des branches séparées et fusionnent leur travail via des pull requests sur GitHub. Voici comment tu peux utiliser GitHub Copilot pour simplifier ce processus.
+
+1. **Créer une pull request** :
+   - Après avoir poussé une branche vers GitHub, l’étudiant doit ouvrir une pull request pour que son code soit revu.
+
+   ```bash
+   # Commande pour créer une pull request à partir de la branche 'nouvelle-fonctionnalité'
+   ```
+
+   Copilot pourrait proposer :
+   ```bash
+   # Ouvre GitHub et crée manuellement une pull request via l'interface utilisateur.
+   # Malheureusement, GitHub Copilot ne propose pas de commande Git pour créer une pull request directement.
+   ```
+
+   **Explication** : Les pull requests permettent de discuter des changements avant de les fusionner dans la branche principale. C’est une étape clé dans le travail collaboratif.
+
+#### Scénario 3 : Nettoyage et réécriture de l'historique
+
+Enfin, voici comment enseigner à tes étudiants à nettoyer l'historique Git avant de fusionner une branche, en utilisant `rebase` et `squash`.
+
+1. **Utiliser `git rebase` pour réécrire l'historique** :
+   - Avant de fusionner une branche, tu peux enseigner l’utilisation de `git rebase` pour réécrire l’historique et conserver un historique de commit propre.
+
+   ```bash
+   # Commande pour rebaser la branche 'nouvelle-fonctionnalité' sur la branche 'main'
+   ```
+
+   Copilot pourrait suggérer :
+   ```bash
+   git rebase main
+   ```
+
+   **Explication** : Cela applique les commits de `nouvelle-fonctionnalité` sur `main`, ce qui permet d’intégrer les derniers changements de la branche principale.
+
+2. **Utiliser `git squash` pour fusionner plusieurs commits** :
+   - Parfois, il peut être utile de fusionner plusieurs petits commits en un seul avant de les fusionner dans la branche principale.
+
+   ```bash
+   # Commande pour combiner les derniers commits en un seul
+   ```
+
+   Copilot pourrait proposer :
+   ```bash
+   git rebase -i HEAD~3
+   ```
+
+   **Explication** : Cette commande ouvre une interface interactive où tu peux choisir de "squasher" plusieurs commits en un seul, ce qui rend l’historique plus propre et plus facile à lire.
+
+### Conclusion
+
+Ce cas pratique montre comment utiliser GitHub Copilot pour générer des commandes Git adaptées à des scénarios plus complexes, tels que la gestion des branches, la résolution de conflits, et la collaboration via pull requests. L’important est d’aider les étudiants à comprendre le **pourquoi** derrière chaque commande, tout en leur fournissant un guide clair sur le **comment**.
+
