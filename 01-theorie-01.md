@@ -1,4 +1,4 @@
-### Cours 1 : **Qu'est-ce que l'IA générative ?**
+# Cours 1 : **Qu'est-ce que l'IA générative ?**
 
 ---
 
