@@ -27,10 +27,6 @@ Comment les transformers permettent-ils la génération de texte dans des outils
 # Partie 2
 
 
-Voici cinq questions sur les **LLM** et **FM** sans réponses, pour encourager la réflexion et la recherche :
-
----
-
 **Question 1 :**  
 Quelles sont les principales différences entre un **Large Language Model (LLM)** et un **Foundation Model (FM)** en termes d'applications et de polyvalence ?
 
