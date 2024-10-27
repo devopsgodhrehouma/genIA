@@ -1,5 +1,3 @@
-
-```markdown
 # Contenu du Cours
 
 Bienvenue dans ce dossier de cours. Vous trouverez ici plusieurs fichiers organisés en lectures obligatoires et évaluations, détaillés comme suit :
@@ -17,5 +15,5 @@ Les évaluations sont structurées en quatre parties, chacune valant **25%** de 
 - **05-partie-04-evaluation.md**
 
 Chaque partie d'évaluation est conçue pour tester votre compréhension des concepts abordés dans les lectures et durant le cours.
-```
+
 
