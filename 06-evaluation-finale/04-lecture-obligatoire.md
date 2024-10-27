@@ -92,7 +92,7 @@ Ces deux approches sont comme choisir entre attendre la fin d'un projet pour fai
 --------------
 -------------
 -------------
-# *PARTIE-03 Différence entre l'**apprentissage par différence temporelle (TD)** et la méthode **Monte Carlo*
+# *PARTIE-03 Différence entre l'**apprentissage par différence temporelle (TD)** et la méthode **Monte Carlo**
 ---
 
 ### L'idée Générale des Deux Méthodes
