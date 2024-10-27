@@ -1,4 +1,4 @@
-# Questions à choix multiple (QCM) ✨
+# Questions à choix multiple (QCM) - PARTIE4 (25%) ✨
 
 1. **Qu'est-ce que l'approche Monte Carlo ?** 🎲  
    - A) Une méthode qui apprend progressivement à chaque étape de l’expérience.
