@@ -1,5 +1,5 @@
 ---------------
-# QUIZ2
+# QUIZ - IA GÉNÉRATIVE - PARTIE 3 (25%)
 ---------------
 
 1. **Quelle est la principale utilisation de l'IA générative ?**
